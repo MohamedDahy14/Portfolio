@@ -215,16 +215,16 @@ section {
   margin: 10px 0px;
   transition: 0.7s ease;
 }
-.card p{
+.card p {
   font-size: 8em;
 }
-@media (min-width : 1299px){
-  .card{
+@media (min-width: 1299px) {
+  .card {
     margin: 20px;
   }
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card .icon {
@@ -241,14 +241,14 @@ section {
 /* .about__content {
   padding: 4rem 0;
 } */
-.about__content h2{
+.about__content h2 {
   display: flex;
   justify-content: center;
   color: var(--new-color2);
   font-size: 2.2em;
   font-weight: 800;
   margin-bottom: 30px;
-  }
+}
 .about__skill-set {
   margin-bottom: 1rem;
   position: relative;
@@ -265,10 +265,9 @@ section {
   display: flex;
   gap: 0.75rem;
   margin-top: 20px;
-
 }
 
-.about__skill-set__list__item p{
+.about__skill-set__list__item p {
   color: #fefefe;
   font-size: 1em;
   letter-spacing: 1px;
@@ -280,11 +279,7 @@ section {
 .about__cta--1 {
   /* background-color: white;
   color: var(--dark); */
-  margin-top: 2rem ;
-  
-  
-
-  
+  margin-top: 2rem;
 }
 .white-paint {
   position: absolute;
@@ -327,7 +322,6 @@ section {
     line-height: 1;
     position: relative;
   }
-  
 }
 
 /* End */
@@ -354,9 +348,18 @@ section {
   text-align: center;
   padding: 0.5rem;
 }
-.design-label--desktop {
-  display: none;
-  visibility: hidden;
+
+@media (min-width: 641px) {
+  .design-label--phone {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 641px) {
+  .design-label--desktop {
+    display: none;
+    visibility: hidden;
+  }
 }
 .image-carousel {
   width: 100%;
@@ -386,19 +389,22 @@ section {
 .design-label {
   transition: opacity 1s ease-in;
 }
-.design-container:hover .image-carousel {
-  scale: 1;
-  top: 0;
-}
-.design-container:hover .design-label {
-  opacity: 0;
-}
 
-.design-container:hover .overlay {
-  opacity: 0;
-}
-.design-container:hover .design {
-  animation: show_image 6s linear 0s 1 backwards;
+@media (min-width: 641px) {
+  .design-container:hover .image-carousel {
+    scale: 1;
+    top: 0;
+  }
+  .design-container:hover .design-label {
+    opacity: 0;
+  }
+
+  .design-container:hover .overlay {
+    opacity: 0;
+  }
+  .design-container:hover .design {
+    animation: show_image 6s linear 0s 1 backwards;
+  }
 }
 
 @keyframes show_image {
@@ -511,4 +517,13 @@ section {
   body {
     font-size: 10px;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+.anchor-card {
+  cursor: pointer;
+  color: #000;
 }
